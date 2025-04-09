@@ -3,6 +3,7 @@ using UnityEngine;
 public class Spawner : MonoBehaviour
 {
     [System.Serializable]
+    //defines what is to be spawned, and creates variable for spawn chance.
     public struct SpawnableObject
     {
         public GameObject prefab;
@@ -10,7 +11,7 @@ public class Spawner : MonoBehaviour
         public float spawnChance;
     }
     public SpawnableObject[] objects;
-
+//defines max and min spawn rate.
     public float minSpawnRate = 1f;
     public float maxSpawnRate = 2f;
 
@@ -23,6 +24,7 @@ public class Spawner : MonoBehaviour
     {
         CancelInvoke();
     }
+    // sets the spawn chance as a random value, tells obstacle to spawn if the spawn chance value number is lower then an obstacles set spawn chance.
     private void Spawn() 
     {
         float spawnChance = Random.value;

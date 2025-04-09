@@ -36,7 +36,7 @@ public class Player : MonoBehaviour
 
         character.Move(direction * Time.deltaTime);
     }
-
+// calls GameOver function from the Game Manager script when the player collides with an obstacle, ending the game.
     private void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("Obstacle")){
