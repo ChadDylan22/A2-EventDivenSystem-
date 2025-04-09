@@ -1,5 +1,4 @@
 using UnityEngine;
-using UnityEngine.AI;
 
 public class GameManager : MonoBehaviour
 {
@@ -47,7 +46,7 @@ public class GameManager : MonoBehaviour
         {
             Destroy(obstacle);
         }
-        
+
         gameSpeed = initialGameSpeed;
         enabled = true;
 
